@@ -1,3 +1,4 @@
+//if ( typeof(Utils) === 'undefined' ) Utils = {};
 var AWS = Npm.require('aws-sdk');
 
 var createAWSFile = function(jobId, callback){
