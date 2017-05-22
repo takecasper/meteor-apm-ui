@@ -43,7 +43,7 @@ KadiraData._authorize = function(userId, dataKey, args) {
     var requestedRange = Date.now() - args.time.getTime();
 
     args.appId.forEach(function(appId) {
-      var plan = Utils.getPlanForTheApp(appId);
+      var plan = global.Utils.getPlanForTheApp(appId);
       var allowedRange = PlansManager.getConfig("allowedRange", plan);
       if(requestedRange > allowedRange) {
         throw new Meteor.Error("400", "Cannot access this date range");
@@ -51,9 +51,7 @@ KadiraData._authorize = function(userId, dataKey, args) {
     });
   }
 
-  console.log("============= UTILS:  ===============")
-  console.log(Utils)
-  if(Utils.isAdmin(user)){
+  if (global.Utils.isAdmin(user)) {
     return;
   }
 
