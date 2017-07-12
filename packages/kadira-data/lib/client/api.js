@@ -76,6 +76,10 @@ KadiraData.observeMetrics = function observeMetrics(dataKey, args, callbacks) {
     added: function(doc) {
       KadiraData._metricsCache.set(hash, doc.data);
       dataVariable.set(doc.data);
+    },
+    changed: function(newDoc, oldDoc, atIndex) {
+      KadiraData._metricsCache.set(hash, newDoc.data);
+      dataVariable.set(newDoc.data);
     }
   });
 
