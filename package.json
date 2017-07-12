@@ -31,5 +31,8 @@
   },
   "devDependencies": {},
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "4.8.4"
+  }
 }
