@@ -37,6 +37,11 @@ KadiraData.Ranges.all = {
     value: 30 * _24HOUR,
     label: "ranges.range_30day",
     resolution: "3hour"
+  },
+  "365day": {
+    value: 365 * _24HOUR,
+    label: "ranges.range_365day",
+    resolution: "3hour"
   }
 };
 
