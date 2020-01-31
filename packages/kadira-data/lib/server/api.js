@@ -55,7 +55,7 @@ KadiraData.getMetrics = function(dataKey, args, resolution, range) {
   var pipes = definition.pipeHandler(newArgs);
   var dbConn = KadiraData.getConnectionForApp(args.appId[0]);
   var coll = dbConn.collection(definition.collection);
-  var data = Meteor.wrapAsync(coll.aggregate, coll)(pipes);
+  var data = Meteor.wrapAsync(coll.aggregate, coll)(pipes, {cursor:  {}});
 
   // apply filters
   definition.filters.forEach(function(filter) {
