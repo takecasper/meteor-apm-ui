@@ -124,7 +124,7 @@ function (userId, start, appsMap) {
     ];
     var dbConn = KadiraData.getConnectionForApp(appId);
     var coll = dbConn.collection("systemMetrics");
-    var data = Meteor.wrapAsync(coll.aggregate, coll)(pipeline);
+    var data = Meteor.wrapAsync(coll.aggregate, coll)(pipeline, {cursor:  {}});
     var noDataCount = missingDataPointsCount(data, start, new Date());
 
     var appName = appsMap[appId].name;

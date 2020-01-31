@@ -42,7 +42,7 @@ Meteor.methods({
       var dbConn = KadiraData.getConnectionForApp(appId);
     }
     var coll = dbConn.collection(definition.collection);
-    var data = Meteor.wrapAsync(coll.aggregate, coll)(pipes);
+    var data = Meteor.wrapAsync(coll.aggregate, coll)(pipes, {cursor:  {}});
 
     definition.filters.forEach(function(filter) {
       data = filter(_.clone(data));
