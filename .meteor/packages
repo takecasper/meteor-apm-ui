@@ -23,7 +23,7 @@ email
 http
 reactive-var
 kadira:stripe-konnect
-minimongo
+minimongo@1.9.3
 percolatestudio:segment.io@=1.1.1_1
 raix:eventemitter
 meteorhacks:customer-io
@@ -35,7 +35,7 @@ react
 fortawesome:fontawesome
 kadira:flow-router
 meteor-base
-mongo
+mongo@1.16.8
 blaze-html-templates
 session
 jquery@1.11.10
