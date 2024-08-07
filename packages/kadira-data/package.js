@@ -5,7 +5,8 @@ Package.describe({
 
 Npm.depends({
   "lru-cache": "2.6.4",
-  "mongo-sharded-cluster": "takecasper/mongo-sharded-cluster#master",
+  "mongo-sharded-cluster":
+    "git://github.com/takecasper/mongo-sharded-cluster#master",
 });
 
 Package.onTest(function (api) {
