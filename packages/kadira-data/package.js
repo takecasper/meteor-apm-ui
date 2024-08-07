@@ -3,11 +3,13 @@ Package.describe({
   name: "local:kadira-data",
 });
 
+/*
 Npm.depends({
   "lru-cache": "2.6.4",
   "mongo-sharded-cluster":
     "git://github.com/topeomot2/mongo-sharded-cluster#master",
 });
+*/
 
 Package.onTest(function (api) {
   configurePackage(api);
