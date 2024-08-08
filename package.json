@@ -33,6 +33,6 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "4.8.4"
+    "node": "14"
   }
 }
